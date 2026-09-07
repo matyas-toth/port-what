@@ -1,0 +1,46 @@
+{
+  "name": "port-who",
+  "version": "0.1.0",
+  "description": "See what is using a port, then free it.",
+  "keywords": [
+    "port",
+    "process",
+    "kill",
+    "cli",
+    "developer-tools"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "port-who": "./bin/port-who.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18.18"
+  },
+  "scripts": {
+    "start": "node ./bin/port-who.js",
+    "test": "node --test test/cli.test.js test/platform.test.js test/kill.test.js test/integration.test.js",
+    "test:coverage": "node --test --experimental-test-coverage test/cli.test.js test/platform.test.js test/kill.test.js test/integration.test.js",
+    "lint": "node --check bin/port-who.js && node --check src/cli.js && node --check src/command.js && node --check src/kill.js && node --check src/output.js && node --check src/platform.js && node --check src/processes.js && node --check scripts/check-release.js",
+    "check": "npm run lint && npm test && npm pack --dry-run",
+    "release:check": "node scripts/check-release.js",
+    "prepublishOnly": "npm run check && npm run release:check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_GITHUB_USERNAME/port-who.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_GITHUB_USERNAME/port-who/issues"
+  },
+  "homepage": "https://github.com/YOUR_GITHUB_USERNAME/port-who#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}
