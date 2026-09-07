@@ -5,13 +5,13 @@ export function createOutput(stream, { color = supportsColor(stream) } = {}) {
   return {
     help(version) {
       stream.write([
-        `${paint.bold('port-who')} ${paint.dim(`v${version}`)}`,
+        `${paint.bold('port-what')} ${paint.dim(`v${version}`)}`,
         '',
         'See what is using a port, then free it.',
         '',
         paint.bold('Usage'),
-        '  port-who <port>',
-        '  port-who <port> --kill',
+        '  port-what <port>',
+        '  port-what <port> --kill',
         '',
         paint.bold('Options'),
         '  -k, --kill     Stop the process and its descendants',
@@ -20,8 +20,8 @@ export function createOutput(stream, { color = supportsColor(stream) } = {}) {
         '      --no-color Disable colors',
         '',
         paint.bold('Examples'),
-        '  port-who 3000',
-        '  port-who 5173 --kill',
+        '  port-what 3000',
+        '  port-what 5173 --kill',
       ].join('\n') + '\n');
     },
     version(version) {
@@ -50,7 +50,7 @@ export function createOutput(stream, { color = supportsColor(stream) } = {}) {
           stream.write(`  ${paint.dim('parent')}   ${truncate(ancestry, terminalWidth(stream) - 11)}\n`);
         }
       });
-      stream.write(`\nYou can kill it with ${paint.cyan(`port-who ${port} --kill`)}\n`);
+      stream.write(`\nYou can kill it with ${paint.cyan(`port-what ${port} --kill`)}\n`);
     },
     killing(descriptions) {
       const names = descriptions.map((item) => `${clean(item.name || 'process')} (PID ${item.pid})`).join(', ');

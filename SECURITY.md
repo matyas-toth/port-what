@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-Security fixes are provided for the latest published version of `port-who`.
+Security fixes are provided for the latest published version of `port-what`.
 
 ## Reporting a vulnerability
 

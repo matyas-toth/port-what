@@ -1,6 +1,6 @@
-# Contributing to port-who
+# Contributing to port-what
 
-Thanks for helping make `port-who` better. The project deliberately has a narrow scope: identify what owns a port and, when asked, stop that process tree.
+Thanks for helping make `port-what` better. The project deliberately has a narrow scope: identify what owns a port and, when asked, stop that process tree.
 
 ## Before opening an issue
 

@@ -19,18 +19,18 @@ test('CLI discovers and stops a real TCP listener and its descendant', { skip: p
   t.after(() => {
     if (descendantPid && isAlive(Number(descendantPid))) process.kill(Number(descendantPid), 'SIGKILL');
   });
-  const inspect = await execNode(['bin/port-who.js', port, '--no-color']);
+  const inspect = await execNode(['bin/port-what.js', port, '--no-color']);
   assert.match(inspect.stdout, new RegExp(`Port ${port} is in use`));
   assert.match(inspect.stdout, new RegExp(`PID ${child.pid}`));
-  assert.match(inspect.stdout, new RegExp(`port-who ${port} --kill`));
+  assert.match(inspect.stdout, new RegExp(`port-what ${port} --kill`));
 
-  const stopped = await execNode(['bin/port-who.js', port, '--kill', '--no-color']);
+  const stopped = await execNode(['bin/port-what.js', port, '--kill', '--no-color']);
   assert.match(stopped.stdout, new RegExp(`Port ${port} is free`));
   assert.match(stopped.stdout, /1 descendant/);
   await waitForExit(child);
   await waitUntilDead(Number(descendantPid));
 
-  const free = await execNode(['bin/port-who.js', port, '--no-color']);
+  const free = await execNode(['bin/port-what.js', port, '--no-color']);
   assert.match(free.stdout, new RegExp(`Port ${port} is free`));
 });
 
@@ -44,11 +44,11 @@ test('CLI discovers and stops a real UDP binding', { skip: process.platform === 
   });
 
   const [port] = (await firstLine(child.stdout)).split(' ');
-  const inspect = await execNode(['bin/port-who.js', port, '--no-color']);
+  const inspect = await execNode(['bin/port-what.js', port, '--no-color']);
   assert.match(inspect.stdout, /UDP/);
   assert.match(inspect.stdout, new RegExp(`PID ${child.pid}`));
 
-  const stopped = await execNode(['bin/port-who.js', port, '--kill', '--no-color']);
+  const stopped = await execNode(['bin/port-what.js', port, '--kill', '--no-color']);
   assert.match(stopped.stdout, new RegExp(`Port ${port} is free`));
   await waitForExit(child);
 });

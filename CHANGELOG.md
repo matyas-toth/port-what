@@ -14,5 +14,5 @@ All notable changes to this project will be documented here. The format follows 
 - Support for `npx`, global installation, color control, and standard help/version flags.
 - Unit and end-to-end tests across Linux, macOS, and Windows CI runners.
 
-[Unreleased]: https://github.com/matyas-toth/port-who/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/matyas-toth/port-who/releases/tag/v0.1.0
+[Unreleased]: https://github.com/matyas-toth/port-what/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/matyas-toth/port-what/releases/tag/v0.1.0

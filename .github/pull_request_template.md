@@ -1,6 +1,6 @@
 ## Summary
 
-Describe the user-visible change and why it belongs in `port-who`.
+Describe the user-visible change and why it belongs in `port-what`.
 
 ## Verification
 

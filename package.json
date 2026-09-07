@@ -1,5 +1,5 @@
 {
-  "name": "port-who",
+  "name": "port-what",
   "version": "0.1.0",
   "description": "See what is using a port, then free it.",
   "keywords": [
@@ -12,7 +12,7 @@
   "license": "MIT",
   "type": "module",
   "bin": {
-    "port-who": "./bin/port-who.js"
+    "port-what": "./bin/port-what.js"
   },
   "files": [
     "bin",
@@ -24,22 +24,22 @@
     "node": ">=18.18"
   },
   "scripts": {
-    "start": "node ./bin/port-who.js",
+    "start": "node ./bin/port-what.js",
     "test": "node --test test/cli.test.js test/platform.test.js test/kill.test.js test/integration.test.js",
     "test:coverage": "node --test --experimental-test-coverage test/cli.test.js test/platform.test.js test/kill.test.js test/integration.test.js",
-    "lint": "node --check bin/port-who.js && node --check src/cli.js && node --check src/command.js && node --check src/kill.js && node --check src/output.js && node --check src/platform.js && node --check src/processes.js && node --check scripts/check-release.js",
+    "lint": "node --check bin/port-what.js && node --check src/cli.js && node --check src/command.js && node --check src/kill.js && node --check src/output.js && node --check src/platform.js && node --check src/processes.js && node --check scripts/check-release.js",
     "check": "npm run lint && npm test && npm pack --dry-run",
     "release:check": "node scripts/check-release.js",
     "prepublishOnly": "npm run check && npm run release:check"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matyas-toth/port-who.git"
+    "url": "git+https://github.com/matyas-toth/port-what.git"
   },
   "bugs": {
-    "url": "https://github.com/matyas-toth/port-who/issues"
+    "url": "https://github.com/matyas-toth/port-what/issues"
   },
-  "homepage": "https://github.com/matyas-toth/port-who#readme",
+  "homepage": "https://github.com/matyas-toth/port-what#readme",
   "publishConfig": {
     "access": "public"
   }

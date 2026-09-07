@@ -23,7 +23,7 @@ export async function run(
     options = parseArgs(argv);
   } catch (error) {
     createOutput(stderr).error(error.message);
-    stderr.write('Run port-who --help for usage.\n');
+    stderr.write('Run port-what --help for usage.\n');
     return 2;
   }
 

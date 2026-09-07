@@ -17,7 +17,7 @@ for (const file of filesWithRepositoryLinks) {
 }
 
 if (packageJson.private === true) problems.push('package.json is marked private');
-if (packageJson.name !== 'port-who') problems.push('package.json has an unexpected package name');
+if (packageJson.name !== 'port-what') problems.push('package.json has an unexpected package name');
 if (!/^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/.test(packageJson.version)) {
   problems.push('package.json does not contain a valid release version');
 }

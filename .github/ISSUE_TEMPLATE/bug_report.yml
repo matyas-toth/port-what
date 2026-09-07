@@ -16,8 +16,8 @@ body:
   - type: input
     id: version
     attributes:
-      label: port-who version
-      placeholder: Output of port-who --version
+      label: port-what version
+      placeholder: Output of port-what --version
     validations:
       required: true
   - type: input

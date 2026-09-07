@@ -1,24 +1,24 @@
-# port-who
+# port-what
 
 > See what is using a port, then free it.
 
-`port-who` answers one question without making you remember `lsof`, `netstat`, PowerShell, PIDs, or process-tree commands.
+`port-what` answers one question without making you remember `lsof`, `netstat`, PowerShell, PIDs, or process-tree commands.
 
 ```console
-$ npx port-who 3000
+$ npx port-what 3000
 ● Port 3000 is in use
   node · PID 41872 · alex
   listens  TCP 127.0.0.1:3000
   command  node server.js
   parent   npm (41855) ← zsh (39210)
 
-You can kill it with port-who 3000 --kill
+You can kill it with port-what 3000 --kill
 ```
 
 Then:
 
 ```console
-$ npx port-who 3000 --kill
+$ npx port-what 3000 --kill
 Stopping node (PID 41872)…
 ✓ Port 3000 is free. Stopped the listener.
 ```
@@ -28,16 +28,16 @@ Stopping node (PID 41872)…
 Run it without installing:
 
 ```sh
-npx port-who 3000
-npx port-who 3000 --kill
+npx port-what 3000
+npx port-what 3000 --kill
 ```
 
 Or install it globally:
 
 ```sh
-npm install --global port-who
-port-who 3000
-port-who 3000 --kill
+npm install --global port-what
+port-what 3000
+port-what 3000 --kill
 ```
 
 The `--kill` option can come before or after the port. `-k` is its short form.
@@ -54,11 +54,11 @@ That is the whole tool. It has no runtime dependencies, no configuration, and no
 
 ## Platform support
 
-| Platform | Discovery | Termination |
-| --- | --- | --- |
-| Linux | `/proc` socket and process data | `SIGTERM`, then `SIGKILL` if required |
-| macOS | built-in `lsof` and `ps` | `SIGTERM`, then `SIGKILL` if required |
-| Windows | PowerShell networking/CIM commands, with `netstat` fallback | `taskkill` process trees |
+| Platform | Discovery                                                   | Termination                           |
+| -------- | ----------------------------------------------------------- | ------------------------------------- |
+| Linux    | `/proc` socket and process data                             | `SIGTERM`, then `SIGKILL` if required |
+| macOS    | built-in `lsof` and `ps`                                    | `SIGTERM`, then `SIGKILL` if required |
+| Windows  | PowerShell networking/CIM commands, with `netstat` fallback | `taskkill` process trees              |
 
 Node.js 18.18 or newer is required. The package contains JavaScript only and works across CPU architectures supported by Node.js.
 
@@ -68,8 +68,8 @@ You can inspect processes owned by other users only when the OS allows it. Stopp
 
 ```text
 Usage
-  port-who <port>
-  port-who <port> --kill
+  port-what <port>
+  port-what <port> --kill
 
 Options
   -k, --kill     Stop the process and its descendants

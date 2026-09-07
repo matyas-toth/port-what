@@ -60,7 +60,7 @@ test('run prints a compact process description and kill command', async () => {
   assert.match(stdout.toString(), /node · PID 42 · dev/);
   assert.match(stdout.toString(), /TCP 127\.0\.0\.1:3000/);
   assert.match(stdout.toString(), /parent\s+npm \(7\)/);
-  assert.match(stdout.toString(), /port-who 3000 --kill/);
+  assert.match(stdout.toString(), /port-what 3000 --kill/);
 });
 
 test('run strips terminal control sequences from process metadata', async () => {
