@@ -34,12 +34,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR_GITHUB_USERNAME/port-who.git"
+    "url": "git+https://github.com/matyas-toth/port-who.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_GITHUB_USERNAME/port-who/issues"
+    "url": "https://github.com/matyas-toth/port-who/issues"
   },
-  "homepage": "https://github.com/YOUR_GITHUB_USERNAME/port-who#readme",
+  "homepage": "https://github.com/matyas-toth/port-who#readme",
   "publishConfig": {
     "access": "public"
   }

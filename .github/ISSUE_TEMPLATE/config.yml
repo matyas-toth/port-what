@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Security vulnerability
-    url: https://github.com/YOUR_GITHUB_USERNAME/port-who/security/advisories/new
+    url: https://github.com/matyas-toth/port-who/security/advisories/new
     about: Report vulnerabilities privately; do not open a public issue.
   - name: Usage question
-    url: https://github.com/YOUR_GITHUB_USERNAME/port-who/discussions
+    url: https://github.com/matyas-toth/port-who/discussions
     about: Ask the community for help.
